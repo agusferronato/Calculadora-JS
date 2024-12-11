@@ -153,7 +153,6 @@ class Calculadora {
                 else 
                     this.memoria.asginarNum2(parseInt(target.textContent), this.esDigitoDecimal);
                 this.pantalla.imprimir(target.textContent);
-                console.log(this.memoria);
                 this.hayError = false; 
                 break;
             case FUNCIONALIDADES["borrar"]:
