@@ -1,0 +1,20 @@
+.calculadora {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    margin: 30px auto;
+    background-color: rgb(175, 175, 175);
+    border-radius: 5px;
+    width: max-content;
+}
+
+.div-pantalla {
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.botones {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 100px);
+}
