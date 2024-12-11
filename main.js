@@ -10,6 +10,9 @@ const FUNCIONALIDADES = {
 };
 
 
+const MAX_CARACTERES_EN_PANTALLA = 16;
+
+
 class Pantalla {
     constructor () {
         this.pantalla = document.querySelector('.pantalla');
@@ -18,7 +21,8 @@ class Pantalla {
         this.pantalla.textContent = "";
     }
     imprimir (texto) {
-        this.pantalla.textContent += texto; 
+        this.pantalla.textContent += texto;
+        this.pantalla.textContent = this.pantalla.textContent.slice(0, MAX_CARACTERES_EN_PANTALLA); 
     }
 };
 
@@ -106,7 +110,7 @@ class Calculadora {
             this.hayError = false; 
             this.esDigitoDecimal = false;
             if (this.memoria.existeOperacion() && !this.memoria.existeNum2())
-                throw new Error("Sintaxis invalida");
+                throw new Error();
             else if (!this.memoria.existeOperacion())
                 resultado = this.memoria.obtenerNum1();
             switch (this.memoria.obtenerOperador()) {
@@ -121,7 +125,7 @@ class Calculadora {
                     break;
                 case FUNCIONALIDADES["division"]:
                     if (this.memoria.obtenerNum2() == 0) 
-                        throw new Error("No se puede dividir por cero");
+                        throw new Error();
                     resultado = this.memoria.obtenerNum1() / this.memoria.obtenerNum2();
                     break;
             }

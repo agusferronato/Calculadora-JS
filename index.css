@@ -1,20 +1,98 @@
+* {
+    font-family: "Open Sans", serif;;
+}
+
+
 .calculadora {
     display: flex;
     padding: 15px;
     flex-direction: column;
     margin: 30px auto;
-    background-color: rgb(175, 175, 175);
+    background-color: #252628;
     border-radius: 5px;
     width: max-content;
 }
 
+
 .div-pantalla {
-    height: 25px;
+    height: 35px;
     margin-bottom: 10px;
 }
 
+
+.pantalla {
+    color: white;
+    font-size: 20px;
+}
+
+
+.operacion {
+    background-color: #f98c3e;
+}
+
+
+.operacion:hover {
+    background-color: #fa7e25;
+}
+
+
+.num {
+    background-color: #424345;
+}
+
+
+.num:hover {
+    background-color: #5d5e61;
+}
+
+
 .botones {
     display: grid;
-    gap: 5px;
-    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    grid-template-columns: repeat(4, 40px);
+    grid-template-rows: repeat(5, 40px);
+}
+
+
+.botones .borrar {
+    background-color: #77797c;
+    font-size: 14px;
+}
+
+
+.botones .borrar:hover {
+    background-color: #909397;
+}
+
+
+.punto {
+    background-color: #77797c;
+}
+
+
+.punto:hover {
+    background-color: #909397;
+}
+
+
+.botones button {
+    cursor: pointer;
+    transition: all .25s;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
+.igual {
+    background-color: #77797c;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+
+.igual:hover {
+    background-color: #909397;
 }
